@@ -1,0 +1,146 @@
+---
+import FeatureCard from "../../ui/inicio/featureCard.astro";
+import { School, Watch, Shield, Users, Activity, HeartHandshake } from "lucide-astro";
+---
+
+<div
+  class="p-8 relative overflow-hidden w-full h-auto border-b-2 border-[#dbd3d2]"
+>
+  <h2 class="text-3xl font-bold text-center mt-16 mb-4 text-[#c48aa8] animate-fade-in">
+    Descubre nuestras características
+  </h2>
+  <p class="text-center text-[#5ebdc3] mb-8 max-w-2xl mx-auto animate-fade-in animate-delay-300">
+    SeData: Tu aliado en el cuidado de la salud. 
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <FeatureCard
+      title="Para instituciones"
+      description="Este proyecto se enfoca específicamente en la comunidad educativa de CEDES don Bosco, sin embargo, puede ser fácilmente adaptado a cualquier institución que busque el cuidado de la salud mental de sus empleados o estudiantes."
+      animationDelay="0"
+    >
+      <School class="w-10 h-10 text-[#e8a7aa] mb-4" />
+    </FeatureCard>
+    <FeatureCard
+      title="Pulsera inteligente"
+      description="El dispositivo se ha desarrollado por medio de programación apoyada a recursos de asociados a Internet para que nos brinde datos precisos en relación a localización y signos vitales. Esto ha de asegurar el funcionamiento óptimo de la pulsera."
+      animationDelay="50"
+    >
+      <Watch class="w-10 h-10 text-[#e8a7aa] mb-4" />
+    </FeatureCard>
+    <FeatureCard
+      title="Seguro"
+      description="Los componentes utilizados son altamente eficaces, precisos y de un tamaño adecuado, brindando al portador la seguridad de que se encontrará en un ambiente seguro cuando use la pulsera. Además, se buscaron materiales cómodos para las personas para que porten la pulsera de una manera cómoda y fiable."
+      animationDelay="100"
+    >
+      <Shield class="w-10 h-10 text-[#e8a7aa] mb-4" />
+    </FeatureCard>
+    <FeatureCard
+      title="Para adolescentes"
+      description="Según la OMS, se estima que alrededor de 4.6% de los adolescentes entre 15 y 19 años padecen del trastorno de ansiedad y solo 1 de cada 4 personas reciben el tratamiento para el caso. La ansiedad en adolescentes se presenta por la exposición al estrés que la mayor parte del tiempo no se ha de controlar. Este dispositivo brindará ayuda inmediata a los jóvenes de CEDES don Bosco en caso de un ataque de ansiedad, que son persistentes en nuestra comunidad educativa."
+      animationDelay="150"
+    >
+      <Users class="w-10 h-10 text-[#e8a7aa] mb-4" />
+    </FeatureCard>
+    <FeatureCard
+      title="Fácil de usar"
+      description="El dispositivo tiene un tamaño adecuado, similar al de un reloj inteligente del mercado. La persona necesita únicamente portar el dispositivo, ya que nuestro módulo de programación detecta cuándo mantenerse en funcionamiento. Cuando la pulsera cumpla su función, deberá únicamente recibir la ayuda solicitada por el dispositivo."
+      animationDelay="200"
+    >
+      <Activity class="w-10 h-10 text-[#e8a7aa] mb-4" />
+    </FeatureCard>
+    <FeatureCard
+      title="Con el fin de ayudar"
+      description="Según la OMS, 2019, los ataques de ansiedad habían afectado en el futuro alrededor de un 5% de la población mundial. Los adolescentes son más propensos a padecerlos y al mismo tiempo los que menos lo comentan. Lo recomendado en estos casos es recibir el apoyo y tratamiento adecuado, por eso SeData es el aliado para ser el intermediario entre el afectado y su tratamiento."
+      animationDelay="250"
+    >
+      <HeartHandshake class="w-10 h-10 text-[#e8a7aa] mb-4" />
+    </FeatureCard>
+  </div>
+  <div class="text-center mt-12 animate-fade-in animate-delay-1000">
+    <a
+      href="#"
+      class="bg-[#e8a7aa] text-white z-50 px-6 py-3 rounded-md inline-flex items-center font-semibold hover:bg-[#c48aa8] transition-colors duration-300 hover:scale-105 transform"
+    >
+      Explora todas <span class="ml-2">→</span>
+    </a>
+  </div>
+  <svg
+    class="svg absolute bottom-0 right-0 w-full h-full z-[-1] animate-pulse"
+    viewBox="0 0 1002 1198"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style="pointer-events: none;"
+  >
+    <path
+      d="M8.25861 1191C47.7628 1142.31 167.53 1036.4 330.565 1002.28C534.359 959.619 702.519 725.652 742.957 401.848C775.308 142.804 926.465 32.8014 998 10.1803"
+      stroke="url(#paint0_linear)"
+      stroke-opacity="0.4"
+      stroke-width="20"></path>
+    <path
+      d="M-100 1091C-60.4958 1042.31 59.2714 936.403 222.306 902.276C426.1 859.619 594.26 625.652 634.698 301.848C667.049 42.8037 818.206 -67.1986 889.741 -89.8197"
+      stroke="url(#paint1_linear)"
+      stroke-opacity="0.4"
+      stroke-width="20"></path>
+    <defs>
+      <linearGradient
+        id="paint0_linear"
+        x1="503.129"
+        y1="10.1803"
+        x2="503.129"
+        y2="1191"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#e8a7aa"></stop>
+        <stop offset="1" stop-color="#5ebdc3"></stop>
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear"
+        x1="394.87"
+        y1="-89.8197"
+        x2="394.87"
+        y2="1091"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#c48aa8"></stop>
+        <stop offset="1" stop-color="#f3ceb1"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
+
+<style>
+  .svg {
+    transform: scale(1.7) translate(15%, 15%);
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-in {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-out forwards;
+  }
+
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-1000 { animation-delay: 1000ms; }
+
+  .animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+</style>

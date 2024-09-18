@@ -1,0 +1,40 @@
+---
+import { ArrowRight } from "lucide-astro";
+---
+
+<div class="relative min-h-screen">
+  <div class="flex flex-col items-center pt-[10vh] md:pt-[15vh] relative z-10">
+    <h1
+      class="text-black font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center px-4 sm:px-10 md:px-20 lg:px-32"
+    >
+      La ciencia de la tranquilidad cerca de ti
+    </h1>
+    <p
+      class="text-black text-center text-base sm:text-lg md:text-xl px-4 sm:px-10 md:px-20 lg:px-56 mt-2 md:mt-4"
+    >
+      "Tu tranquilidad en un solo lugar, Conectate con tu alma"
+    </p>
+    <button
+      class="text-white w-auto px-4 py-2 bg-[#e8a7aa] hover:bg-[#c48aa8] transition-all duration-300 rounded-lg mt-8 flex items-center justify-center text-sm sm:text-base md:text-lg"
+    >
+      Explora nuestro proyecto
+      <ArrowRight class="ml-2 w-4 h-4" />
+    </button>
+  </div>
+  <div class="md:block hidden top-0 left-0 w-full h-full">
+    <iframe
+    allowtransparency="true"
+    src="https://my.spline.design/applewatchcopy-81fcb5c5f64b807c6b32e219efca21ef/"
+    aria-hidden="true"
+      style="margin-top: 5rem; padding: 0; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: none; overflow: hidden;"
+    ></iframe>
+  </div>
+  <div class="md:hidden block top-0 left-0 w-full h-full">
+    <iframe 
+    aria-hidden="true"
+    allowfullscreen="true"
+    src='https://my.spline.design/applewatchcopy-1a4cc0da752c9885a6b46e77ab9fa7d5/'
+    style="margin-top: 5rem; padding: 0; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: none; overflow: hidden;"
+    ></iframe>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+---
+import { Menu } from "lucide-astro";
+---
+
+<nav
+  class="px-4 py-2 border-b border-[#dbd3d2] flex justify-between items-center fixed top-0 left-0 right-0 bg-white z-50"
+>
+  <div class="pl-2 text-xl font-bold text-[#d6a4bd]">SeData</div>
+  <div class="hidden md:flex gap-4">
+    <a
+      href="/"
+      class="px-4 py-2 hover:text-[#86cfd2] transition-colors duration-300"
+      >Demostracion</a
+    >
+    <a
+      href="/"
+      class="px-4 py-2 hover:text-[#86cfd2] transition-colors duration-300"
+      >Nosotros</a
+    >
+    <a
+      href="/"
+      class="px-4 py-2 hover:text-[#86cfd2] transition-colors duration-300"
+      >Ayuda</a
+    >
+    <a
+      href="/"
+      class="bg-[#f0bbbe] px-4 py-2 rounded-md hover:bg-[#d6a4bd] transition-colors duration-300"
+      >Contacto</a
+    >
+  </div>
+  <div
+    class="md:hidden cursor-pointer text-[#d6a4bd] border border-[#dbd3d2] rounded-md p-2"
+  >
+    <Menu />
+  </div>
+  <div
+    id="menu"
+    class="absolute md:hidden top-14 left-0 w-full bg-white border-[#dbd3d2] flex flex-col gap-2 overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+  >
+    <a
+      href="/demostracion"
+      class="px-4 mx-4 py-2 transition-colors duration-300 hover:bg-opacity-20 hover:bg-[#f0bbbe] rounded-md"
+      >Demostracion</a
+    >
+    <a
+      href="/nosotros"
+      class="px-4 mx-4 py-2 transition-colors hover:bg-opacity-20 duration-300 hover:bg-[#f0bbbe] rounded-md"
+      >Nosotros</a
+    >
+    <a
+      href="/ayuda"
+      class="px-4 mx-4 py-2 transition-colors hover:bg-opacity-20 duration-300 hover:bg-[#f0bbbe] rounded-md"
+      >Ayuda</a
+    >
+    <a
+      href="/contacto"
+      class="hover:bg-[#f0bbbe] bg-opacity-20 bg-[#f0bbbe] hover:bg-opacity-80 mx-4 px-4 py-2 mb-4 rounded-md transition-colors duration-300 "
+      >Contacto</a
+    >
+  </div>
+</nav>
+
+<style>
+  .menu-open {
+    max-height: 300px;
+  }
+</style>
+
+<script>
+  const menu = document.getElementById("menu");
+  const menuButton = document.querySelector(".md\\:hidden");
+
+  menuButton?.addEventListener("click", () => {
+    menu?.classList.toggle("menu-open");
+    menu?.classList.toggle("border-b border-slate-200 py-4");
+  });
+</script>

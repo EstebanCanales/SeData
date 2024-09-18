@@ -1,9 +1,56 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Herozone from "../components/sections/inicio/herozone.astro";
+import Features from "../components/sections/inicio/features.astro";
+import CTA from "../components/sections/inicio/CTA.astro";
+import Nosotros from "../components/sections/inicio/nosotros.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="SeData Pulsera Inteligente">
+  <main>
+    <section
+      class="transition-all w-full h-[100vh] gradient border-b-2 border-white"
+    >
+      <Herozone />
+    </section>
+    <section
+      class="relative overflow-hidden h-auto w-full border-b-2"
+    >
+      <Features />
+    </section>
+    <section
+      class="relative overflow-hidden h-auto w-full border-b-2"
+    >
+      <CTA />
+    </section>
+    <section
+      class="relative overflow-hidden h-auto w-full p-4 border-b-2 bg-gray-100"
+    >
+      <Nosotros />
+    </section>
+  </main>
 </Layout>
-
 <style>
+  .gradient {
+    animation: gradientAnimation 10s ease infinite;
+    background-size: 200% 200%;
+    background-image: radial-gradient(
+      circle at bottom,
+      #f0bbbe 0%,
+      #d6a4bd 30%,
+      #86cfd2 100%
+    );
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
 </style>

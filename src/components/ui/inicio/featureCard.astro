@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  animationDelay: string;
+} 
+
+const { title, description, animationDelay } = Astro.props;
+
+function truncateAtWord(str: string, maxLength: number): string {
+  if (str.length <= maxLength) return str;
+  const truncated = str.slice(0, maxLength).split(' ').slice(0, -1).join(' ');
+  return truncated + '...';
+}
+---
+<div class="bg-white p-6 rounded-lg shadow-md z-10 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full animate-slide-in" style={`animation-delay: ${animationDelay}ms;`}>
+  <slot />
+  <h3 class="text-xl font-semibold mb-2 text-[#c48aa8]">{title}</h3>
+  <p class="text-[#5ebdc3] mb-4 flex-grow overflow-hidden">
+    {truncateAtWord(description, 160)}
+  </p>
+  <a href="#" class="text-[#e8a7aa] font-semibold inline-flex items-center hover:text-[#c48aa8] transition-colors duration-300 mt-auto hover:translate-x-2 transform">
+    Explora <span class="ml-2">→</span>
+  </a>
+</div>
+
+<style>
+  @keyframes slide-in {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-out forwards;
+  }
+</style>
+
+

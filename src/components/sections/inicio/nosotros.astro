@@ -1,0 +1,55 @@
+---
+const titulo = "Acerca de nosotros";
+const descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.";
+const caracteristicas = [
+  "Caracteristica 1",
+  "Caracteristica 2",
+  "Caracteristica 3",
+  "Caracteristica 4",
+];
+---
+
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 animate-fade-in">{titulo}</h2>
+    <img src="/images/nosotros.png" alt="Nosotros" class="mb-8 animate-fade-in h-auto max-w-full">
+    <p class="text-lg text-center mb-12 max-w-2xl mx-auto animate-slide-up">{descripcion}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {caracteristicas.map((caracteristica, index) => (
+        <div class={`bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-pop-in`} style={`animation-delay: ${index * 0.2}s`}>
+          <p class="text-lg font-semibold text-center">{caracteristica}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 1s ease-out;
+  }
+
+  .animate-pop-in {
+    animation: popIn 0.6s cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+</style>
