@@ -3,17 +3,21 @@ import { Rocket, Lightbulb, Eye, ChartLine } from 'lucide-astro'
 ---
 
 <div class="min-h-screen bg-white p-4 sm:p-8">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 lg:grid-rows-8 gap-4 lg:h-[calc(100vh-8rem)] px-10 md:px-20 mx-auto">
-    <div class="lg:col-start-5 lg:col-end-8 lg:row-start-1 lg:row-end-5 animate-fade-in animate-delay-400">
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 lg:grid-rows-9 gap-4 lg:h-[calc(100vh-8rem)] px-10 md:px-20 mx-auto">
+
+    <div class="lg:col-span-3 lg:row-span-6 lg:row-start-4 animate-fade-in animate-delay-400">
       <div class="card bg-[#d6a4bd] animate-float">
-        <Eye class="w-12 h-12 mb-4 text-[#333]" />
-        <h2 class="text-xl sm:text-2xl font-bold mb-4">Visión</h2>
+        <div class="flex items-center mb-4">
+          <h2 class="text-xl sm:text-3xl font-bold mb-4">Visión</h2>
+          <Eye class="w-8 h-8 mb-4 text-[#333] ml-2 mt-1" />
+        </div>
         <p class="mb-4">SeData busca fortalecer las herramientas para el control de la ansiedad, intercediendo entre la persona víctima de los ataques y los recursos para su bienestar. Este proyecto fomenta un ambiente educativo sano en CEDES Don Bosco.</p>
-        <a href="#" class="bg-[#f7dbc5] p-1 px-2 rounded-lg hover:bg-[#f7dbc599]">Leer más</a>
+        
       </div>
     </div>
     
-    <div class="lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-4 animate-fade-in animate-delay-600">
+    <div class="lg:col-span-5 lg:row-span-3 lg:col-start-3 animate-fade-in animate-delay-600">
       <div class="card bg-[#f7dbc5] animate-float">
         <ChartLine class="w-12 h-12 mb-4 text-[#333]" />
         <h2 class="text-xl sm:text-2xl font-bold mb-4">Por que el proyecto</h2>
@@ -24,32 +28,32 @@ import { Rocket, Lightbulb, Eye, ChartLine } from 'lucide-astro'
       </div>
     </div>
     
-    <div class="lg:col-start-4 lg:col-end-7 lg:row-start-5 lg:row-end-9 animate-fade-in animate-delay-800">
+    <div class="lg:col-span-3 lg:row-span-6 lg:col-start-4 lg:row-start-4 animate-fade-in animate-delay-800">
       <div class="card bg-[#86cfd2] animate-float">
-        <Rocket class="w-12 h-12 mb-4 text-[#333]" />
-        <h2 class="text-xl sm:text-2xl font-bold mb-4">Futuro</h2>
-        <p class="mb-4">Se estima que para el futuro alrededor de un 5% de la población mundial habrá padecido un ataque de ansiedad, sin embargo, la investigación en nuevas tecnologías para la mejora del bienestar puede ayudar a reducir los números de afectados, especialmente en los adolescentes estudiantes de CEDES Don Bosco.</p>
-        <div class="flex items-center justify-center">
-          <div class="w-8 h-8 rounded-full bg-[#d6a4bd] mr-2"></div>
-          <div class="w-8 h-8 rounded-full bg-[#f7dbc5] mr-2"></div>
-          <div class="w-8 h-8 rounded-full bg-[#f0bbbe]"></div>
+        <div class="flex items-center mb-4">
+
+          <h2 class="text-xl sm:text-3xl font-bold ">Futuro</h2>
+          <Rocket class="w-8 h-8 text-[#333] ml-2" />
         </div>
+        <p class="mb-4 ">Se estima que para el futuro alrededor de un 5% de la población mundial habrá padecido un ataque de ansiedad, sin embargo, la investigación en nuevas tecnologías para la mejora del bienestar puede ayudar a reducir los números de afectados, especialmente en los adolescentes estudiantes de CEDES Don Bosco.</p>
+        
       </div>
     </div>
     
-    <div class="lg:col-start-1 lg:col-end-4 lg:row-start-4 lg:row-end-8 animate-fade-in animate-delay-1000">
+    <div class="lg:col-span-3 lg:row-span-6 lg:col-start-7 lg:row-start-4 animate-fade-in animate-delay-1000">
       <div class="card bg-[#f0bbbe] animate-float">
-        <Lightbulb class="w-12 h-12 mb-4 text-[#333]" />
-        <h2 class="text-xl sm:text-2xl font-bold mb-4">Impacto</h2>
+        <div class="flex">
+
+          <h2 class="text-xl sm:text-3xl font-bold ml-2">Impacto</h2>
+          <Lightbulb class="w-8 h-8 mb-4 text-[#333]" />
+        </div>
         <p class="mb-4">Los avances tecnológicos han generado un impacto enorme en la salud mental. SeData ayudará a las personas a encontrar recursos y apoyo, siendo intermediario entre el afectado y el especialista en salud mental. Siendo un dispositivo de monitoreo, ayudará a la comunidad educativa de CEDES Don Bosco a la mejora del bienestar mental.</p>
         <div class="grid md:grid-cols-2 md:grid-cols gap-4">
           <div class="text-center">
-            <span class="block text-xl sm:text-2xl font-bold">3,6%</span>
-						<span class="text-xs font-semibold">10 a 14 años padecen de ansiedad</span>
+           
           </div>
           <div class="text-center">
-            <span class="block text-xl sm:text-2xl font-bold">4.6%</span>
-						<span class="text-xs font-semibold">15 a 19 años padecen de ansiedad</span>
+           
           </div>
         </div>
       </div>
