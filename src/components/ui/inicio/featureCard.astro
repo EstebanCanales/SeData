@@ -7,17 +7,12 @@ interface Props {
 
 const { title, description, animationDelay } = Astro.props;
 
-function truncateAtWord(str: string, maxLength: number): string {
-  if (str.length <= maxLength) return str;
-  const truncated = str.slice(0, maxLength).split(' ').slice(0, -1).join(' ');
-  return truncated + '...';
-}
 ---
 <div class="bg-white p-6 rounded-lg shadow-md z-10 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full animate-slide-in" style={`animation-delay: ${animationDelay}ms;`}>
   <slot />
   <h3 class="text-xl font-semibold mb-2 text-[#c48aa8]">{title}</h3>
   <p class="text-[#5ebdc3] mb-4 flex-grow overflow-hidden">
-    {truncateAtWord(description, 160)}
+    { description }
   </p>
 </div>
 
