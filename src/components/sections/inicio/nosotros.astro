@@ -1,17 +1,18 @@
 ---
 const titulo = "Acerca de nosotros";
-const descripcion = "Somos un equipo de décimo año de la especialidad de electromecánica del Colegio Técnico Profesional Don Bosco, conformado por Anghie Barrantes, Mariana González, Génesis Guzmán y Josué Sandoval. Somos un grupo con una mentalidad positiva, siempre buscando el camino hacia el éxito.";
+const descripcion =
+	"Somos un equipo de décimo año de la especialidad de electromecánica del Colegio Técnico Profesional Don Bosco, conformado por Anghie Barrantes, Mariana González, Génesis Guzmán y Josué Sandoval. Somos un grupo con una mentalidad positiva, siempre buscando el camino hacia el éxito.";
 const caracteristicas = [
-  "Responsabilidad",
-  "Trabajo en equipo",
-  "Compromiso",
-  "Resolución",
+	"Responsabilidad",
+	"Trabajo en equipo",
+	"Compromiso",
+	"Resolución",
 ];
 ---
 
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-8 animate-fade-in">{titulo}</h2>
-    <img src="/images/nosotros.png" alt="Nosotros" class="mb-8 animate-fade-in h-auto max-w-full">
+  <img src="../../../../public/team.jpeg" alt="Nosotros" class="mb-8 animate-fade-in h-[80vh] mx-auto">
     <p class="text-lg text-center mb-12 max-w-2xl mx-auto animate-slide-up">{descripcion}</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {caracteristicas.map((caracteristica, index) => (
@@ -39,7 +40,7 @@ const caracteristicas = [
     100% { transform: scale(1); opacity: 1; }
   }
 
-  .animate-fade-in {
+  .animate-fade-in public{
     animation: fadeIn 1s ease-out;
   }
 
