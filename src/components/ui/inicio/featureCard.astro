@@ -1,12 +1,11 @@
 ---
 interface Props {
-  title: string;
-  description: string;
-  animationDelay: string;
-} 
+	title: string;
+	description: string;
+	animationDelay: string;
+}
 
 const { title, description, animationDelay } = Astro.props;
-
 ---
 <div class="bg-white p-6 rounded-lg shadow-md z-10 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full animate-slide-in" style={`animation-delay: ${animationDelay}ms;`}>
   <slot />
